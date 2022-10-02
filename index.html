@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Runtime Error</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./assets/shooter.png" />
+  </head>
+  <body>
+    <div id="splash">
+      <div class="innerWrapper">
+        <h1>Mission Space</h1>
+        <img src="assets/logo1.jpg" class="logo"/>
+
+
+        <button id="start" class="start-button">
+          <span class="head-1">Start game</span>
+          <div class="line top"></div>
+          <div class="line right"></div>
+          <div class="line bottom"></div>
+          <div class="line left"></div>
+        </button>
+        <div class="controls">
+          <h3>Controls</h3>
+          <dl>
+            <dt>Move</dt>
+            <dd>
+              <div class="wasd">
+                <kbd>W</kbd>
+                <kbd>A</kbd>
+                <kbd>S</kbd>
+                <kbd>D</kbd>
+              </div>
+              <div class="wasd">
+                <kbd>↑</kbd>
+                <kbd>←</kbd>
+                <kbd>↓</kbd>
+                <kbd>→</kbd>
+              </div>
+            </dd>
+            <dt>Shoot</dt>
+            <dd>
+              <kbd>Space</kbd>
+              <kbd>Mouse click</kbd>
+            </dd>
+            <dt>Pause/Resume</dt>
+            <dd>
+              <kbd>P</kbd>
+            </dd>
+          </dl>
+        </div>
+        
+      </div>
+    </div>
+    <div id="paused" class="hidden">
+      <div class="innerWrapper">
+        <h2>Game paused</h2>
+        <p>Press <kbd>P</kbd> to resume</p>
+      </div>
+    </div>
+    <div id="gameOver" class="hidden">
+      <div class="innerWrapper">
+        <h2 class="over">Game Over</h2>
+        <h3 style="font-size:30px">Your score: <span id="finalScore"></span></h3>
+        <button id="restart" tabindex="-1">
+          <span>Restart game</span>
+          <div class="line top"></div>
+          <div class="line right"></div>
+          <div class="line bottom"></div>
+          <div class="line left"></div>
+        </button>
+      </div>
+    </div>
+    <div class="canvasWrapper">
+      <canvas id="game-canvas"></canvas>
+      <div id="score" style="font-size:39px">0</div>
+    </div>
+    <script src="./game.js"></script>
+  </body>
+</html>
